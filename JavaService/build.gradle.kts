@@ -2,7 +2,7 @@ plugins {
     java
 }
 
-group = "com.crosslanguage"
+group = "com.jvmskeleton"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ java {
 }
 
 tasks.jar{
-    archiveBaseName.set("JavaService")
+    archiveFileName.set("JavaService.jar")
 }
 
 tasks.named<Test>("test") {

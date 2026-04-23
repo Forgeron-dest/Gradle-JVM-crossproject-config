@@ -2,7 +2,7 @@ plugins {
     scala
 }
 
-group = "com.crosslanguage"
+group = "com.jvmskeleton"
 
 dependencies {
     implementation("org.scala-lang:scala3-library_3:3.4.2")
@@ -22,7 +22,7 @@ tasks.withType<ScalaCompile> {
 }
 
 tasks.jar {
-    archiveBaseName.set("ScalaService")
+    archiveFileName.set("ScalaService.jar")
 }
 
 tasks.named<Test>("test") {

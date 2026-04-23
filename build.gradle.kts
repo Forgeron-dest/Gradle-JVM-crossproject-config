@@ -3,7 +3,7 @@ plugins{
     kotlin("jvm") version "1.9.24" apply false
 }
 
-group = "com.crosslanguage"
+group = "com.jvmskeleton"
 
 repositories {
     mavenCentral()
@@ -11,10 +11,10 @@ repositories {
 
 sourceSets {
     main {
-        java.srcDir("app/src/main/java")
+        java.srcDir("src/main/java")
     }
     test {
-        java.srcDir("app/src/test/java")
+        java.srcDir("src/test/java")
     }
 }
 
@@ -43,10 +43,9 @@ java{
 }
 
 tasks.register<Jar>("appJar") {
-    archiveBaseName.set("CrossLanguageApp")
-    archiveClassifier.set("all")
+    archiveFileName.set("JVMSkeleton-all.jar")
     manifest {
-        attributes("Main-Class" to "crosslanguage.App")
+        attributes("Main-Class" to "com.jvmskeleton.App")
     }
     // Include root project output
     from(sourceSets.main.get().output)

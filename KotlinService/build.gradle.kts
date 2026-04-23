@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "1.9.24"
 }
 
-group = "com.crosslanguage"
+group = "com.jvmskeleton"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ kotlin {
 }
 
 tasks.jar {
-    archiveBaseName.set("KotlinService")
+    archiveFileName.set("KotlinService.jar")
 }
 
 tasks.named<Test>("test") {

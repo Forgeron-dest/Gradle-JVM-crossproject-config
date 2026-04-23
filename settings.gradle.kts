@@ -12,5 +12,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CrossLanguage"
+rootProject.name = "JVMSkeleton"
 include("JavaService", "KotlinService", "ScalaService")
