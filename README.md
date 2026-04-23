@@ -41,11 +41,12 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
+```
 
 ### Kotlin classes
 
 Because of the way kotlin compiles to JVM kotlin objects/methods need to be called through KtClass.INSTANCE.class/method!
-```
+
 
 ---
 
