@@ -5,13 +5,13 @@ A multi-language JVM project demonstrating Java, Kotlin, and Scala services buil
 ## Project Structure
 
 ```
-CrossLanguage/
-├── app/                    # Main application (depends on all services)
+JVMSkeleton/
 ├── JavaService/           # Pure Java service module
-├── KotlinService/         # Pure Kotlin service module
-├── ScalaService/          # Pure Scala service module
-├── build.gradle.kts       # Root build configuration
-└── settings.gradle.kts    # Multi-project include configuration
+├── KotlinService/        # Pure Kotlin service module
+├── ScalaService/         # Pure Scala service module
+├── src/                  # Main source root (for root project)
+├── build.gradle.kts      # Root build configuration
+└── settings.gradle.kts   # Multi-project include configuration
 ```
 
 ## How It Works
@@ -122,14 +122,6 @@ Open `build/reports/tests/test/index.html` after running tests.
 java -jar build/libs/CrossLanguageApp-all.jar
 ```
 
-### Run Individual Service JARs
-
-```bash
-java -jar JavaService/build/libs/JavaService.jar
-java -jar KotlinService/build/libs/KotlinService.jar
-java -jar ScalaService/build/libs/ScalaService.jar
-```
-
 ---
 
 ## Common Tasks
@@ -138,8 +130,6 @@ java -jar ScalaService/build/libs/ScalaService.jar
 |------|---------|
 | List all projects | `./gradlew projects` |
 | Dependency tree | `./gradlew dependencies` |
-| Check style | `./gradlew check` |
-| Stop Gradle daemon | `./gradlew --stop` |
 
 ---
 
@@ -151,6 +141,7 @@ If you see version errors, specify the JDK explicitly:
 
 ```bash
 ./gradlew build -Dorg.gradle.java.home=$JAVA_HOME
+./gradlew --stop
 ```
 
 ### Configuration Cache Issues
